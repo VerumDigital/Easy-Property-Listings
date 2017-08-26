@@ -82,6 +82,7 @@ $epl_settings = get_option('epl_settings');
 ?>
 <div class="wrap">
 	<h2><?php _e( 'Extensions Settings', 'easy-property-listings' ); ?></h2>
+	<?php $link = 'admin.php?page=epl-settings'; ?>
 	<p><?php _e( 'Configure your extension settings here. Visit the main settings page for more extension settings.', 'easy-property-listings' ); ?></p>
 	<h2 class="nav-tab-wrapper epl-nav-tab-wrapper">
 		<?php
@@ -144,7 +145,35 @@ $epl_settings = get_option('epl_settings');
 					</div>
 				';
 
+
+
+
+
+
 				if(!empty($ext_field_groups['fields'])) {
+
+
+
+					echo '<div class="epl-fields-tab-preview" style="width: 50%; float: right;">';
+						?>
+
+
+						<div class="epl-field-preview" style="width:100%; height: 600px; background: #ccc;">
+						<h3 style="margin:0">I AM A Preview box</h3>
+
+
+						</div>
+
+
+
+						<?php
+					echo '</div>';
+
+
+
+
+
+
 
 					echo '<div class="epl-fields-tab-content">';
 					$counter = 1;
@@ -168,6 +197,7 @@ $epl_settings = get_option('epl_settings');
 
 									</div>
 								<?php } ?>
+
 								<div class="<?php echo $field['type'] == 'help' ? 'epl-full': 'epl-half-right'; ?>">
 									<?php
 										$val = isset($field['default']) ? $field['default'] : '' ;

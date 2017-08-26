@@ -275,6 +275,7 @@ h3.epl-welcome-sub-heading {
 	overflow: hidden;
 	padding: 1em;
 	border: 1px solid #ccc;
+	width: 45%;
 }
 .epl-fields-field-current.epl-fields-single-menu{
 	-webkit-transition: all 0.6s ease-in-out;
@@ -291,20 +292,33 @@ h3.epl-welcome-sub-heading {
 	display:none;
 }
 .epl-field {
-	margin: 1em 0;
+	margin: 0;
 	overflow: hidden;
+	border-bottom: 1px solid #dedede;
+	padding: 0;
+}
+.epl-field:last-child {
+	border-bottom: 0;
+}
+.epl-field .epl-half-left label {
+	font-weight: bold;
+	font-size: 1.2em;
+}
+.epl-field .epl-half-right {
+	margin: 0.5em 0;
 }
 .epl-setting-heading {
 	margin-top: 0;
 }
 .epl-field-row {
-	display:block;
-	margin:5px 0;
+	display: inline-block;
+	margin: 0 1em 1em 0;
+	padding: 0 0;
 }
 .epl-field textarea {
 	float: left;
 	margin: 10px 5px;
-	width: 90%;
+	width: 100%;
 	min-height: 100px;
 	overflow: auto;
 	padding: 2px 6px;
@@ -351,14 +365,19 @@ h3.epl-welcome-sub-heading {
 }
 .epl-half-left {
 	box-sizing: border-box;
-	width: 40%;
-	padding-right: 2em;
+	width: 100%;
+	padding: 0;
+	margin: 1em 0;
 	float: left;
+	/* border: 2px solid #ddd */
 }
 .epl-half-right {
 	box-sizing: border-box;
-	width: 60%;
-	float: left;
+	width: 100%;
+	float: none;
+	margin: 0 !important;
+	padding: 0;
+	/*border-left: 2px solid #ddd;*/
 }
 .epl-half-right input[type=text]#label_location {
 }
