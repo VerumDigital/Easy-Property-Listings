@@ -42,10 +42,10 @@ function epl_admin_enqueue_scripts($screen) {
 
 
 
-		wp_enqueue_style( 	'epl-wordpress-admin-styles-default', 				$current_dir_path . '/css/style-wp-admin-DEFAULT.css',		FALSE,			EPL_PROPERTY_VER );
+		//wp_enqueue_style( 	'epl-wordpress-admin-styles-default', 				$current_dir_path . '/css/style-wp-admin-DEFAULT.css',		FALSE,			EPL_PROPERTY_VER );
 
 
-wp_enqueue_style( 	'epl-wordpress-admin-styles', 				$current_dir_path . '/css/style-wp-admin.css',		FALSE,			EPL_PROPERTY_VER );
+			wp_enqueue_style( 	'epl-wordpress-admin-styles', 				$current_dir_path . '/css/style-wp-admin.css',		FALSE,			EPL_PROPERTY_VER );
 
 	}
 
