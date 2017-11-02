@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
+
+
+
+body {
+    background: #ffffff;
+    color: #444;
+    font-family:  "Roboto" , -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-size: 13px;
+    line-height: 1.4em;
+    min-width: 600px
+}
+
+
+
+.wrap h1.wp-heading-inline {
+    display: inline-block;
+    margin-right: 5px;
+    margin-top: 0.5em;
+
+    font-size: 4em;
+    font-weight: 300;
+    color: #777;
+}
+
+.wp-header-end {
+    margin: 60px 0 0
+}
+
+
+
+
+
+
+
+
+.metabox-prefs label {
+    display: inline-block;
+    padding-right: 15px;
+    line-height: 50px;
+    font-size: 13px;
+}
+
+
+
+
+
+
+
+.fix-me {
+    /* background: orange; */
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    font-size: 1.2em;
+    line-height: 1.6
+}
+
+
+
+
+.fix-me.left {
+    /* background: orange; */
+    float: left;
+    width: 70%;
+    box-sizing: border-box;
+    font-size: 1.2em;
+    line-height: 1.6
+}
+
+
+.fix-me.right {
+    /* background: orange; */
+    float: left;
+    width: 30%;
+    box-sizing: border-box;
+    font-size: 1.2em;
+    line-height: 1.6
+}
+
+.fix-me.wide {
+    /* background: orange; */
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    font-size: 1.2em;
+    line-height: 1.6
+}
+
+
+
+
+
+.fix-me.left  h3 {
+	font-size: 1em;
+	margin-top: 0;
+}
+
+
+
+.title.column-title.has-row-actions.column-primary.page-title,
+.manage-column.column-title.column-primary.sortable.desc {
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#wpadminbar {
+    direction: ltr;
+    color: #ccc;
+   font-family:  "Roboto" , -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", "Slabo 27px", sans-serif;
+    height: 32px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 600px;
+    z-index: 99999;
+
+
+
+   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3464b8+0,4ea9ea+100 */
+background: rgb(52,100,184); /* Old browsers */
+background: -moz-linear-gradient(left, rgba(52,100,184,1) 0%, rgba(78,169,234,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, rgba(52,100,184,1) 0%,rgba(78,169,234,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, rgba(52,100,184,1) 0%,rgba(78,169,234,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3464b8', endColorstr='#4ea9ea',GradientType=1 ); /* IE6-9 */
+
+
+}
+
+/*! This file is auto-generated */
+
+#adminmenu,
+
+#adminmenuback,
+#adminmenuwrap {
+    width: 160px;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3464b8+0,4ea9ea+100 */
+background: rgb(52,100,184); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(52,100,184,1) 0%, rgba(78,169,234,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(52,100,184,1) 0%,rgba(78,169,234,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(52,100,184,1) 0%,rgba(78,169,234,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3464b8', endColorstr='#4ea9ea',GradientType=0 ); /* IE6-9 */
+}
+
+
+
+
+
+#menu-management .menu-edit,
+#menu-settings-column .accordion-container,
+.comment-ays,
+.feature-filter,
+.imgedit-group,
+.manage-menus,
+.menu-item-handle,
+.popular-tags,
+.stuffbox,
+.widget-inside,
+.widget-top,
+.widgets-holder-wrap,
+.wp-editor-container,
+p.popular-tags,
+table.widefat {
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 1px 1px rgba(50, 0, 255, .2)
+}
+
+#adminmenu .wp-submenu,
+#adminmenu .wp-has-current-submenu .wp-submenu {
+	background: rgba(0,0,0,0.3);
+
+	/* background: rgba(255,255,255,0.2); */
+}
+
+#adminmenu .opensub .wp-submenu li.current a,
+#adminmenu .wp-submenu li.current,
+#adminmenu .wp-submenu li.current a,
+#adminmenu .wp-submenu li.current a:focus,
+#adminmenu .wp-submenu li.current a:hover,
+#adminmenu a.wp-has-current-submenu:focus+.wp-submenu li.current a {
+    color: #fff;
+}
+
+
+
+
+.widefat thead td,
+.widefat thead th {
+    border-bottom: 1px solid #ddd;
+
+}
+
+.widefat tfoot td,
+.widefat tfoot th {
+    border-top: 1px solid #ddd;
+    border-bottom: none
+}
+
+
+
+#menu-management .menu-edit,
+#menu-settings-column .accordion-container,
+.comment-ays,
+.feature-filter,
+.imgedit-group,
+.manage-menus,
+.menu-item-handle,
+.popular-tags,
+.stuffbox,
+.widget-inside,
+.widget-top,
+.widgets-holder-wrap,
+.wp-editor-container,
+p.popular-tags,
+table.widefat {
+    border: 1px solid #ddd;
+
+
+
+    box-shadow: 0 1px 1px rgba(50, 0, 255, .2);
+
+
+    box-shadow: 0px 0px 16px rgba(50, 0, 255, .2);
+
+
+
+}
+
+
+.tablenav .tablenav-pages {
+    float: left;
+    height: 28px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    cursor: default;
+    color: #555;
+}
+
+
+
+
+.epl-section-title-unique-id,
+.epl-section-title-coordinates {
+	font-size: 0.8em;
+}
+
+.epl-section-title-unique-id span,
+.epl-section-title-coordinates span {
+	font-size: 0.8em;
+}
+
+
+
+.epl_meta_unique_id_value,
+.epl_meta_coordinates_value {
+	font-size: 0.8em;
+}
+
+
+
+.manage-column.column-property_status.sortable.desc {
+
+	width: 10%;
+	max-width: 100px;
+}
+
+
+
+
+.alternate,
+.striped>tbody>:nth-child(odd),
+ul.striped>:nth-child(odd) {
+    background: #f6faff;
+}

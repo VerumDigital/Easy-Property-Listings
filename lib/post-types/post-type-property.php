@@ -80,6 +80,10 @@ if ( is_admin() ) {
 		$columns = array(
 			'cb' 			=> '<input type="checkbox" />',
 			'property_thumb'	=> __('Image', 'easy-property-listings' ),
+
+			'styled'		=> __('Styled', 'easy-property-listings' ),
+
+
 			'property_price'	=> __('Price', 'easy-property-listings' ),
 			'title' 		=> __('Address', 'easy-property-listings' ),
 			'listing'		=> __('Listing Details', 'easy-property-listings' ),
@@ -120,7 +124,164 @@ if ( is_admin() ) {
 				do_action('epl_manage_listing_column_property_thumb');
 				do_action('epl_manage_listing_column_property_thumb_after');
 
+				/* 'Price' column. */
+
+						do_action('epl_manage_listing_column_price_before');
+						do_action('epl_manage_listing_column_price');
+						do_action('epl_manage_listing_column_price_after');
+
 				break;
+
+
+
+
+			case 'styled' :
+
+				// Wrapper
+
+
+
+
+					// Left
+
+
+
+					echo '<div class="fix-me left">';
+
+						/* 'title' column. */
+
+
+						do_action('epl_manage_listing_column_title_before');
+						do_action('epl_manage_listing_column_title');
+						do_action('epl_manage_listing_column_title_after');
+
+
+
+						/* 'Listing Details' column. */
+
+						do_action('epl_manage_listing_column_listing_before');
+						do_action('epl_manage_listing_column_listing');
+						do_action('epl_manage_listing_column_listing_after');
+
+
+
+
+
+
+
+
+
+
+
+
+
+					echo '</div>';
+
+
+
+
+					echo '<div class="fix-me right">';
+
+
+
+
+					// right
+
+
+						/* 'property_status' column. */
+
+						//do_action('epl_manage_listing_column_property_status_before');
+						//do_action('epl_manage_listing_column_property_status');
+						//do_action('epl_manage_listing_column_property_status_after');
+
+
+						/* 'agent' column. */
+
+
+						do_action('epl_manage_listing_column_agent_before');
+						do_action('epl_manage_listing_column_agent');
+						do_action('epl_manage_listing_column_agent_after');
+
+
+
+
+
+
+
+
+
+
+						/* 'Inspections' column. */
+
+						do_action('epl_manage_listing_column_inspections_before');
+						do_action('epl_manage_listing_column_inspections');
+						do_action('epl_manage_listing_column_inspections_after');
+
+
+
+
+					echo '</div>';
+
+
+					echo '<div class="fix-me wide epl-clearfix">';
+
+
+
+
+					// WIDE
+
+
+						/* 'Geocoding' column. */
+
+						epl_manage_listing_column_section_title( 'Coordinates'  );
+
+						do_action('epl_manage_listing_column_geo_before');
+						do_action('epl_manage_listing_column_geo');
+						do_action('epl_manage_listing_column_geo_after');
+
+
+
+						epl_manage_listing_column_section_title( 'Unique ID' );
+
+
+						/* 'Listing ID' column. */
+						do_action('epl_manage_listing_column_listing_id_before');
+						do_action('epl_manage_listing_column_listing_id');
+						do_action('epl_manage_listing_column_listing_id_after');
+
+
+
+
+
+
+					echo '</div>';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				break;
+
+
+
+
+
+
+
 
 			/* If displaying the 'Listing Details' column. */
 
@@ -176,4 +337,5 @@ if ( is_admin() ) {
 		}
 	}
 	add_action( 'manage_property_posts_custom_column', 'epl_manage_property_columns_value', 10, 2 );
+
 }

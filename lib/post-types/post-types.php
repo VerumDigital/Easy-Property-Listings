@@ -268,6 +268,45 @@ function epl_manage_listing_column_listing_callback() {
 		echo '</div>';
 	}
 
+	/**
+
+		if ( !empty( $homeopen) ) {
+		$homeopen = array_filter(explode( "\n", $homeopen ));
+			$homeopen_list =  '<ul class="epl_meta_home_open">';
+			foreach ( $homeopen as $num => $item ) {
+			  $homeopen_list .= '<li>' . htmlspecialchars( $item ) . '</li>';
+			}
+			$homeopen_list .= '</ul>';
+		echo '<div class="epl_meta_home_open_label"><span class="home-open"><strong>'.$epl_settings['label_home_open'].'</strong></span>' , $homeopen_list , '</div>';
+	}
+
+	**/
+}
+add_action( 'epl_manage_listing_column_listing' , 'epl_manage_listing_column_listing_callback' );
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Posts Types Columns
+ *
+ * @since 1.0
+ */
+function epl_manage_listing_column_inspections_callback() {
+	global $post,$epl_settings,$property;
+
+	$property_address_suburb	= get_the_term_list( $post->ID, 'location', '', ', ', '' );
+	$heading 			= $property->get_property_meta('property_heading');
+	$homeopen 			= $property->get_property_meta('property_inspection_times');
+
+
 	if ( !empty( $homeopen) ) {
 		$homeopen = array_filter(explode( "\n", $homeopen ));
 			$homeopen_list =  '<ul class="epl_meta_home_open">';
@@ -278,7 +317,14 @@ function epl_manage_listing_column_listing_callback() {
 		echo '<div class="epl_meta_home_open_label"><span class="home-open"><strong>'.$epl_settings['label_home_open'].'</strong></span>' , $homeopen_list , '</div>';
 	}
 }
-add_action( 'epl_manage_listing_column_listing' , 'epl_manage_listing_column_listing_callback' );
+add_action( 'epl_manage_listing_column_inspections' , 'epl_manage_listing_column_inspections_callback' );
+
+
+
+
+
+
+
 
 /**
  * Posts Types Column ID
@@ -291,7 +337,7 @@ function epl_manage_listing_column_listing_id_callback() {
 	$unique_id	= get_post_meta( $post->ID, 'property_unique_id', true );
 	/* If no duration is found, output a default message. */
 	if (  !empty( $unique_id ) )
-		echo $unique_id;
+		echo '<div class="epl_meta_unique_id_value"><span>' . $unique_id . '</span></div>';
 }
 add_action( 'epl_manage_listing_column_listing_id' , 'epl_manage_listing_column_listing_id_callback' );
 
@@ -309,7 +355,9 @@ function epl_manage_listing_column_geo_callback() {
 		_e('No','easy-property-listings' ) ;
 	/* If there is a duration, append 'minutes' to the text string. */
 	else
-		echo $property_address_coordinates;
+
+
+		echo '<div class="epl_meta_coordinates_value"><span>' . $property_address_coordinates . '</span></div>';
 }
 add_action( 'epl_manage_listing_column_geo' , 'epl_manage_listing_column_geo_callback' );
 
@@ -493,3 +541,122 @@ function epl_manage_listing_column_agent_callback() {
 	}
 }
 add_action( 'epl_manage_listing_column_agent' , 'epl_manage_listing_column_agent_callback' );
+
+
+
+
+
+
+
+
+
+/**
+ * Admin Post Wrapper
+ *
+ * @since 1.0
+ */
+function epl_admin_styled_wrapper_begin_callback( $type = 'div', $class , $placement ) {
+	?>
+
+		<<?php echo $type; ?> class="epl-<?php echo $class; ?> <?php echo $placement; ?>">
+
+	<?php
+}
+
+
+
+function epl_admin_styled_wrapper_after_callback( $type = 'div' ) {
+	?>
+
+		<<?php echo $type; ?>>
+
+	<?php
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Admin Post Title
+ *
+ * @since 1.0
+ */
+function epl_manage_listing_column_title_callback() {
+	global $post, $property; ?>
+
+		<div class="epl-clearfix">
+
+			<h3 class="epl-admin-listing-title epl-clearfix">
+				<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+
+			</h3>
+
+		</div>
+
+	<?php
+}
+add_action( 'epl_manage_listing_column_title' , 'epl_manage_listing_column_title_callback' );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Admin Post Title
+ *
+ * @since 1.0
+ */
+function epl_manage_listing_column_section_title( $title , $element = 'div' ) {
+
+
+	$class = 'epl-section-title-' . $title;
+
+	$class = strtolower( $class );
+
+	$class = $class = str_replace(' ', '-', $class);
+
+?>
+
+		<<?php echo( $element ); ?> class="<?php echo( $class ); ?>">
+
+			<span>
+				<?php echo( $title ); ?>
+
+			</span>
+
+		</<?php echo( $element ); ?> >
+
+	<?php
+}

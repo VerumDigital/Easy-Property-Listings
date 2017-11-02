@@ -38,6 +38,15 @@ function epl_admin_enqueue_scripts($screen) {
 		wp_enqueue_script( 	'epl-admin-scripts', 				$current_dir_path . '/js/jquery-admin-scripts.js', 	array('jquery'),	EPL_PROPERTY_VER );
 		wp_enqueue_style( 	'epl-admin-styles', 				$current_dir_path . '/css/style-admin.css',		FALSE,			EPL_PROPERTY_VER );
 
+
+
+
+
+		wp_enqueue_style( 	'epl-wordpress-admin-styles-default', 				$current_dir_path . '/css/style-wp-admin-DEFAULT.css',		FALSE,			EPL_PROPERTY_VER );
+
+
+wp_enqueue_style( 	'epl-wordpress-admin-styles', 				$current_dir_path . '/css/style-wp-admin.css',		FALSE,			EPL_PROPERTY_VER );
+
 	}
 
 	// load admin style on help & documentation pages as well
