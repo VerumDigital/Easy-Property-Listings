@@ -598,6 +598,8 @@ function epl_admin_styled_wrapper_after_callback( $type = 'div' ) {
  *
  * @since 1.0
  */
+
+ /*
 function epl_manage_listing_column_title_callback() {
 	global $post, $property; ?>
 
@@ -611,8 +613,8 @@ function epl_manage_listing_column_title_callback() {
 		</div>
 
 	<?php
-}
-add_action( 'epl_manage_listing_column_title' , 'epl_manage_listing_column_title_callback' );
+} */
+//add_action( 'epl_manage_listing_column_title' , 'epl_manage_listing_column_title_callback' );
 
 
 
@@ -656,7 +658,7 @@ function epl_manage_listing_column_section_title( $title , $element = 'div' ) {
 
 			</span>
 
-		</<?php echo( $element ); ?> >
+		</<?php echo( $element ); ?>>
 
 	<?php
 }

@@ -81,11 +81,13 @@ if ( is_admin() ) {
 			'cb' 			=> '<input type="checkbox" />',
 			'property_thumb'	=> __('Image', 'easy-property-listings' ),
 
+			'title' 		=> __('title', 'easy-property-listings' ),
+
 			'styled'		=> __('Styled', 'easy-property-listings' ),
 
 
 			'property_price'	=> __('Price', 'easy-property-listings' ),
-			'title' 		=> __('Address', 'easy-property-listings' ),
+
 			'listing'		=> __('Listing Details', 'easy-property-listings' ),
 			'listing_id'		=> __('Unique ID' , 'easy-property-listings' ),
 			'geo'			=> __('Geo', 'easy-property-listings' ),
@@ -124,11 +126,9 @@ if ( is_admin() ) {
 				do_action('epl_manage_listing_column_property_thumb');
 				do_action('epl_manage_listing_column_property_thumb_after');
 
-				/* 'Price' column. */
 
-						do_action('epl_manage_listing_column_price_before');
-						do_action('epl_manage_listing_column_price');
-						do_action('epl_manage_listing_column_price_after');
+
+
 
 				break;
 
@@ -139,7 +139,7 @@ if ( is_admin() ) {
 
 				// Wrapper
 
-
+				echo '<div class="section-fix-me">';
 
 
 					// Left
@@ -154,6 +154,8 @@ if ( is_admin() ) {
 						do_action('epl_manage_listing_column_title_before');
 						do_action('epl_manage_listing_column_title');
 						do_action('epl_manage_listing_column_title_after');
+
+
 
 
 
@@ -188,11 +190,17 @@ if ( is_admin() ) {
 					// right
 
 
+					/* 'Price' column. */
+						do_action('epl_manage_listing_column_price_before');
+						do_action('epl_manage_listing_column_price');
+						do_action('epl_manage_listing_column_price_after');
+
+
 						/* 'property_status' column. */
 
-						//do_action('epl_manage_listing_column_property_status_before');
-						//do_action('epl_manage_listing_column_property_status');
-						//do_action('epl_manage_listing_column_property_status_after');
+						do_action('epl_manage_listing_column_property_status_before');
+						do_action('epl_manage_listing_column_property_status');
+						do_action('epl_manage_listing_column_property_status_after');
 
 
 						/* 'agent' column. */
@@ -263,7 +271,7 @@ if ( is_admin() ) {
 
 
 
-
+				echo '</div>';
 
 
 
