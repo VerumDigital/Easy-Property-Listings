@@ -53,6 +53,7 @@ function epl_register_custom_post_type_commercial() {
 		'has_archive'		=>	$archives,
 		'hierarchical'		=>	false,
 		'menu_position'		=>	'26.7',
+		'show_in_rest'		=>	true,
 		'taxonomies'		=>	array( 'location', 'tax_feature' ),
 		'supports'		=>	apply_filters( 'epl_commercial_supports', array( 'title', 'editor', 'author', 'thumbnail', 'excerpt' , 'comments' ) ),
 	);

@@ -54,6 +54,7 @@ function epl_register_custom_post_type_rural() {
 		'has_archive'		=>	$archives,
 		'hierarchical'		=>	false,
 		'menu_position'		=>	'26.4',
+		'show_in_rest'		=>	true,
 		'taxonomies'		=>	array( 'location', 'tax_feature' ),
 		'supports'		=>	apply_filters( 'epl_rural_supports', array( 'title', 'editor', 'author', 'thumbnail', 'excerpt' , 'comments' ) ),
 	);
@@ -92,7 +93,7 @@ if ( is_admin() ) {
 
 		// unset author columns as duplicate of agent column
 		unset( $columns['author'] );
-		unset( $columns['comments'] ); 
+		unset( $columns['comments'] );
 
 		// Geocode Column
 		$geo_debug = !empty($epl_settings) && isset($epl_settings['debug']) ? $epl_settings['debug'] : 0;

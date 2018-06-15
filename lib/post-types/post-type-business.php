@@ -54,6 +54,7 @@ function epl_register_custom_post_type_business() {
 		'has_archive'		=>	$archives,
 		'hierarchical'		=>	false,
 		'menu_position'		=>	'26.6',
+		'show_in_rest'		=>	true,
 		'taxonomies'		=>	array( 'location', 'tax_feature' ),
 		'supports'		=>	apply_filters( 'epl_business_supports', array( 'title', 'editor', 'author', 'thumbnail', 'excerpt' , 'comments' ) ),
 	);
