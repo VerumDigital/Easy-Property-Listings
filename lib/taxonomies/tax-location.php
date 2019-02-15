@@ -54,6 +54,7 @@ function epl_register_taxonomy_location() {
 		'show_admin_column'		=> true,
 		'show_in_nav_menus'		=> true,
 		'show_tagcloud'			=> true,
+		'show_in_rest'			=> true,
 		'rewrite'			=> $rewrite,
 	);
 	register_taxonomy( 'location', array( 'property' , 'rental' , 'land', 'rural' , 'business', 'commercial' , 'commercial_land' ,'testimonial' ,'location',  ) , $args );
